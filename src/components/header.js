@@ -11,9 +11,12 @@ const Header = ({ siteTitle, fixed }) => {
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap">
+            <Link
+              className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap"
+              to="/"
+            >
               Data4Humanity
-            </a>
+            </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -29,10 +32,18 @@ const Header = ({ siteTitle, fixed }) => {
             }
           >
             <div className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <div className="lg:pl-5">About</div>
-              <div className="lg:pl-5">Projects</div>
-              <div className="lg:pl-5">Join</div>
-              <div className="lg:pl-5">Contact</div>
+              <Link className="lg:pl-5" to="/about">
+                About
+              </Link>
+              <Link className="lg:pl-5" to="/projects">
+                Projects
+              </Link>
+              <Link className="lg:pl-5" to="/join">
+                Join
+              </Link>
+              <Link className="lg:pl-5" to="/contact">
+                Contact
+              </Link>
             </div>
           </div>
         </div>
