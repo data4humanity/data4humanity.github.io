@@ -16,10 +16,10 @@ module.exports = {
       full: "100%",
       screen: "100vh",
     },
-    textColor: theme => ({
-      ...theme("colors"),
-      primary: "#3490dc",
-      secondary: "#f08a5d",
+    colors: theme => ({
+      primary: "var(--color-primary)",
+      secondary: "var(--color-secondary)",
+      ...defaultTheme.colors,
     }),
   },
   variants: {},

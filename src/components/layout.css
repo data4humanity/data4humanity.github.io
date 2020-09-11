@@ -8,3 +8,9 @@ html,
 body {
 	font-family: "Mukta", sans-serif;
 }
+
+:root {
+	--color-primary: #3490de;
+	--color-secondary: #f08a5d;
+	/* ... */
+}
