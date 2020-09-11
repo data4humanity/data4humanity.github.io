@@ -2,34 +2,44 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-    className="bg-red-400"
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+import { FaBars } from "react-icons/fa"
+
+const Header = ({ siteTitle, fixed }) => {
+  const [navbarOpen, setNavbarOpen] = React.useState(false)
+  return (
+    <div>
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg mb-3">
+        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+            <a className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap">
+              Data4Humanity
+            </a>
+            <button
+              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+              <FaBars />
+            </button>
+          </div>
+          <div
+            className={
+              "lg:max-h-screen lg:flex flex-grow items-center overflow-hidden transition-all duration-500 ease-in-out" +
+              (navbarOpen ? " max-h-screen" : " max-h-0")
+            }
+          >
+            <div className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <div className="lg:pl-5">About</div>
+              <div className="lg:pl-5">Projects</div>
+              <div className="lg:pl-5">Join</div>
+              <div className="lg:pl-5">Contact</div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-  </header>
-)
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
