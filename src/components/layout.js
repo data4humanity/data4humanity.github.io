@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <div className="px-8">
         <main>{children}</main>
       </div>
       <Footer siteTitle={data.site.siteMetadata.title} />

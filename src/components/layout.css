@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap");
+
+.font-primary {
+	font-family: "Mukta", sans-serif;
+}
+
+html,
+body {
+	font-family: "Mukta", sans-serif;
+}

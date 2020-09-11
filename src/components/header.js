@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import { FaBars } from "react-icons/fa"
+import Logo from "./logo"
 
 const Header = ({ siteTitle, fixed }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
@@ -15,7 +16,7 @@ const Header = ({ siteTitle, fixed }) => {
               className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap"
               to="/"
             >
-              Data4Humanity
+              <Logo />
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid rounded bg-transparent block lg:hidden outline-none focus:outline-none"

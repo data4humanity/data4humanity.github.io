@@ -5,7 +5,6 @@ import React from "react"
 import { FaBars } from "react-icons/fa"
 
 const Footer = ({ siteTitle, fixed }) => {
-  const [navbarOpen, setNavbarOpen] = React.useState(false)
   return (
     <section className="bg-white py-8 w-full">
       <div className="px-8">
