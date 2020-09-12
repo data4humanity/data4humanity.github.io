@@ -39,7 +39,7 @@ const Header = ({ siteTitle, fixed }) => {
               <Link className="md:pl-8" to="/projects">
                 Projects
               </Link>
-              <Link className="md:pl-8" to="/projects">
+              <Link className="md:pl-8" to="/events">
                 Events
               </Link>
               <Link className="md:pl-8" to="/join">

@@ -29,12 +29,12 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="pt-32 pb-48 px-12 relative overflow-hidden">
-        <div className="text-5xl font-semibold bg-white max-w-full text-center md:text-left">
+        <div className="text-5xl font-semibold bg-white max-w-full text-center md:text-left leading-tight">
           <div className="inline text-primary">Data science</div>{" "}
           <div className="inline text-gray-600">for</div>{" "}
           <div className="inline text-secondary">social good</div>
         </div>
-        <div className="text-lg bg-white w-full md:flex md:flex-wrap">
+        <div className="text-lg bg-white w-full md:flex md:flex-wrap pt-8">
           <input
             className="border-2 border-black py-1 px-2 w-full md:w-64"
             style={{ marginRight: "-2px" }}
