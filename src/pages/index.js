@@ -28,23 +28,19 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="py-32 px-12 relative overflow-hidden">
-        <div
-          className="text-5xl font-semibold bg-white max-w-full text-center md:text-left"
-          style={{ width: "max-content" }}
-        >
-          Data science for social good
+      <div className="pt-32 pb-48 px-12 relative overflow-hidden">
+        <div className="text-5xl font-semibold bg-white max-w-full text-center md:text-left">
+          <div className="inline text-primary">Data science</div>{" "}
+          <div className="inline text-gray-600">for</div>{" "}
+          <div className="inline text-secondary">social good</div>
         </div>
-        <div
-          className="text-lg bg-white flex flex-wrap max-w-full"
-          style={{ width: "max-content" }}
-        >
+        <div className="text-lg bg-white w-full md:flex md:flex-wrap">
           <input
-            className="border-2 border-black py-1 px-2"
+            className="border-2 border-black py-1 px-2 w-full md:w-64"
             style={{ marginRight: "-2px" }}
             placeholder="me@yale.edu"
           />
-          <div className="border-2 border-black px-2 py-1">
+          <div className="border-2 border-black bg-black text-white px-2 py-1 text-center">
             Join our mailing list
           </div>
         </div>
@@ -68,7 +64,9 @@ const IndexPage = () => {
         })}
       </div>
       <div className="py-24 px-12 bg-primary text-white">
-        <div className="text-5xl font-bold pb-8">Our mission</div>
+        <div className="text-5xl font-bold pb-8 text-center md:text-left">
+          Our mission
+        </div>
         <div className="w-full flex items-center">
           <div className="w-full py-16 md:w-1/2">
             <div className="pr-12">
@@ -82,12 +80,12 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="w-0 md:w-1/2">
             <img src={ConnectImage} className="px-24" />
           </div>
         </div>
         <div className="w-full py-16 flex items-center">
-          <div className="w-1/2">
+          <div className="w-0 md:w-1/2">
             <img src={ExpertImage} className="px-24" />
           </div>
           <div className="w-full md:w-1/2">
@@ -117,7 +115,7 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="w-0 md:w-1/2">
             <img src={CollaborateImage} className="px-24" />
           </div>
         </div>
