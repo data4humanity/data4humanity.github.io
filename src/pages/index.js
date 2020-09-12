@@ -5,43 +5,145 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div className="py-32 px-8">
-      <div className="text-5xl font-semibold">Data science for social good</div>
-      <div className="text-2xl">Join our mailing list</div>
-      <div className="text-2xl">Get in touch</div>
-    </div>
-    <div className="py-8 px-8 bg-primary text-white">
-      <div className="text-4xl">Our mission</div>
-      <div className="w-full flex">
-        <div className="w-full md:w-1/3">
-          <div>1.</div>
+import ConnectImage from "../images/connect.svg"
+import ExpertImage from "../images/expert.svg"
+import CollaborateImage from "../images/collaborate.svg"
+
+const IndexPage = () => {
+  let xBins = new Array(parseInt((window.innerWidth * 2) / 12)).fill(0)
+  let xPositions = new Array(2000)
+  let yPositions = new Array(2000)
+
+  for (var i = 0; i < 2000; i++) {
+    let xBin = Math.round(
+      ((1 - Math.pow(Math.random(), 3)) * window.innerHeight * 2) / 12
+    )
+
+    yPositions[i] = xBins[xBin]
+    xPositions[i] = xBin
+
+    xBins[xBin]++
+  }
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="py-32 px-12 relative overflow-hidden">
+        <div
+          className="text-5xl font-semibold bg-white max-w-full text-center md:text-left"
+          style={{ width: "max-content" }}
+        >
+          Data science for social good
         </div>
-        <div className="w-full md:w-1/3">
-          <div>2.</div>
+        <div
+          className="text-lg bg-white flex flex-wrap max-w-full"
+          style={{ width: "max-content" }}
+        >
+          <input
+            className="border-2 border-black py-1 px-2"
+            style={{ marginRight: "-2px" }}
+            placeholder="me@yale.edu"
+          />
+          <div className="border-2 border-black px-2 py-1">
+            Join our mailing list
+          </div>
         </div>
-        <div className="w-full md:w-1/3">
-          <div>3.</div>
+        {[...Array(2000).keys()].map((x, index) => {
+          let seed = Math.random()
+
+          return (
+            <div
+              className="absolute bottom-0 select-none text-gray-400 font-bold"
+              style={{
+                left: xPositions[index] * 12,
+                bottom: yPositions[index] * 12,
+                zIndex: -1,
+                background: "white",
+                fontSize: "10px",
+              }}
+            >
+              {parseInt(seed * 100).toString(12)}
+            </div>
+          )
+        })}
+      </div>
+      <div className="py-24 px-12 bg-primary text-white">
+        <div className="text-5xl font-bold pb-8">Our mission</div>
+        <div className="w-full flex items-center">
+          <div className="w-full py-16 md:w-1/2">
+            <div className="pr-12">
+              <span className="font-bold text-2xl bg-white text-purple-600 px-3 px-4 leading-3">
+                1
+              </span>
+              <div className="text-2xl bg-white p-4 text-black shadow-lg">
+                <span className="font-bold text-purple-600">Connect</span>{" "}
+                students with community organizations to build partnerships for
+                applying data science.
+              </div>
+            </div>
+          </div>
+          <div className="w-1/2">
+            <img src={ConnectImage} className="px-24" />
+          </div>
+        </div>
+        <div className="w-full py-16 flex items-center">
+          <div className="w-1/2">
+            <img src={ExpertImage} className="px-24" />
+          </div>
+          <div className="w-full md:w-1/2">
+            <div className="pr-12">
+              <span className="font-bold text-2xl bg-white text-primary px-3 px-4 leading-3">
+                2
+              </span>
+              <div className="text-2xl bg-white p-4 text-black shadow-lg">
+                <span className="font-bold text-blue-600">Organize</span> events
+                for experts to share their research with the community.
+              </div>
+            </div>
+          </div>{" "}
+        </div>
+        <div className="w-full py-16 flex items-center">
+          <div className="w-full md:w-1/2">
+            <div className="pr-12">
+              <span className="font-bold text-2xl bg-white text-teal-600 px-4 leading-3">
+                3
+              </span>
+              <div className="text-2xl bg-white p-4 text-black shadow-lg">
+                <span className="font-bold text-teal-600">Offer</span> a space
+                for those passionate about{" "}
+                <span className="bg-white text-purple-600 font-bold">1</span>{" "}
+                and <span className="bg-white text-blue-600 font-bold">2</span>{" "}
+                to meet and learn from each other.
+              </div>
+            </div>
+          </div>
+          <div className="w-1/2">
+            <img src={CollaborateImage} className="px-24" />
+          </div>
         </div>
       </div>
-    </div>
-    <div className="py-8 px-8">
-      <div className="text-4xl">Projects with purpose</div>
-      <div className="w-full flex">
-        <div className="w-full md:w-1/3">
-          <div>1.</div>
-        </div>
-        <div className="w-full md:w-1/3">
-          <div>2.</div>
-        </div>
-        <div className="w-full md:w-1/3">
-          <div>3.</div>
+      <div className="py-24 px-12">
+        <div className="text-5xl font-bold pb-8">Projects in progress</div>
+        <div className="w-full flex">
+          <div className="w-full md:w-1/3">
+            <div>
+              <div className="font-bold text-2xl">Prison education</div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3">
+            <div>
+              <div className="font-bold text-2xl">Hunger and homelessness</div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/3">
+            <div>
+              <div className="font-bold text-2xl">Course recommendations</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default IndexPage

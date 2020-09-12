@@ -9,7 +9,7 @@ const Header = ({ siteTitle, fixed }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-between px-8 py-3 navbar-expand-md mb-3">
+      <div className="bg-white flex flex-wrap items-center justify-between px-12 py-3 navbar-expand-md mb-3">
         <div className="w-full mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
             <Link
@@ -32,20 +32,20 @@ const Header = ({ siteTitle, fixed }) => {
               (navbarOpen ? " max-h-screen" : " max-h-0")
             }
           >
-            <div className="flex flex-col md:flex-row list-none md:ml-auto">
-              <Link className="md:pl-5" to="/about">
+            <div className="flex flex-col md:flex-row list-none md:ml-auto text-lg">
+              <Link className="md:pl-8" to="/about">
                 About
               </Link>
-              <Link className="md:pl-5" to="/projects">
+              <Link className="md:pl-8" to="/projects">
                 Projects
               </Link>
-              <Link className="md:pl-5" to="/projects">
+              <Link className="md:pl-8" to="/projects">
                 Events
               </Link>
-              <Link className="md:pl-5" to="/join">
+              <Link className="md:pl-8" to="/join">
                 Join
               </Link>
-              <Link className="md:pl-5" to="/contact">
+              <Link className="md:pl-8" to="/contact">
                 Contact
               </Link>
             </div>

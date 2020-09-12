@@ -8,8 +8,8 @@ import Logo from "./logo"
 
 const Footer = ({ siteTitle, fixed }) => {
   return (
-    <section className="bg-white py-8 w-full">
-      <div className="px-8">
+    <section className="bg-white py-8 w-full bg-gray-200">
+      <div className="px-12">
         <div className="flex justify-between flex-wrap w-full">
           <div className="w-full lg:w-2/5">
             <div className="text-2xl font-bold">
