@@ -4,6 +4,11 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import MihirKhunte from "../images/mihir_khunte.png"
+import JamesHan from "../images/james_han.png"
+import BrianRhee from "../images/brian_rhee.png"
+import KevinHu from "../images/kevin_hu.png"
+
 const About = () => (
 	<Layout>
 		<SEO title="About" />
@@ -21,6 +26,10 @@ const About = () => (
 			<div className="text-4xl font-semibold bg-white max-w-full text-center md:text-left leading-tight">
 				Our members
 			</div>
+			<img src={MihirKhunte} className="w-24" />
+			<img src={JamesHan} className="w-24" />
+			<img src={BrianRhee} className="w-24" />
+			<img src={KevinHu} className="w-24" />
 			<div className="text-3xl font-semibold bg-white max-w-full text-center md:text-left leading-tight">
 				Leadership
 			</div>
