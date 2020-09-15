@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import MihirKhunte from "../images/mihir_khunte.png"
-import JamesHan from "../images/james_han.png"
-import BrianRhee from "../images/brian_rhee.png"
-import KevinHu from "../images/kevin_hu.png"
+import MihirKhunte from "../images/members/mihir_khunte.png"
+import JamesHan from "../images/members/james_han.png"
+import BrianRhee from "../images/members/brian_rhee.png"
+import KevinHu from "../images/members/kevin_hu.png"
 
 const About = () => (
 	<Layout>

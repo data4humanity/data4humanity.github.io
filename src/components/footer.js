@@ -16,15 +16,22 @@ const Footer = ({ siteTitle, fixed }) => {
               <Logo />
             </div>
             <div className="flex text-xl">
-              <Link to="https://github.com/data4humanity" className="pr-2">
-                <FaGithubSquare />
-              </Link>
-              <Link
-                to="https://www.facebook.com/events/3525368720848083/"
+              <a
+                href="https://github.com/data4humanity"
                 className="pr-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithubSquare />
+              </a>
+              <a
+                href="https://www.facebook.com/events/3525368720848083/"
+                className="pr-2"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebookSquare />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="w-1/2 sm:w-1/3 lg:w-1/5">
@@ -55,16 +62,8 @@ const Footer = ({ siteTitle, fixed }) => {
             </div>
             <div className="text-gray-600">
               <div>
-                <Link to="/students" className="text-grey hover:text-grey-dark">
-                  For students
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href="/partners"
-                  className="text-grey hover:text-grey-dark"
-                >
-                  For partners
+                <Link to="/contact" className="text-grey hover:text-grey-dark">
+                  Contact us
                 </Link>
               </div>
             </div>

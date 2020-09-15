@@ -42,9 +42,6 @@ const Header = ({ siteTitle, fixed }) => {
               <Link className="md:pl-8" to="/events">
                 Events
               </Link>
-              <Link className="md:pl-8" to="/join">
-                Join
-              </Link>
               <Link className="md:pl-8" to="/contact">
                 Contact
               </Link>
