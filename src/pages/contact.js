@@ -101,7 +101,7 @@ const Join = () => {
 	}
 
 	return (
-		<Layout restrictWidth={true}>
+		<Layout restrictWidth={false}>
 			<SEO title="Join" />
 			<div className="bg-gray-100 py-24">
 				<div className="w-1/3 mx-auto shadow-lg p-8 bg-white rounded-lg">
