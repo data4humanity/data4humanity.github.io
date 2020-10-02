@@ -40,9 +40,9 @@ const About = () => (
 			<div className="text-center md:text-left text-xl text-gray-700">
 				We're a new club at Yale working to connect undergraduates with
 				opportunities to work on applied data science projects with real-world
-				impact. Through project-based teams, we help our members develop
-				essential data science skills while creating a community for people
-				interested to meet each other.
+				impact. Through project-based initiatives, we help our members develop
+				essential data science skills. At the same time, we provide a community
+				for people with these interests to meet each other.
 			</div>
 		</div>
 		<div className="pt-4 pb-12 px-12 relative overflow-hidden">
