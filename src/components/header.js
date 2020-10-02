@@ -9,7 +9,7 @@ const Header = ({ siteTitle, fixed }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
   return (
     <div>
-      <div className="bg-gray-200 md:bg-white flex flex-wrap items-center justify-between px-12 max-w-screen-lg mx-auto py-3 navbar-expand-md mb-3">
+      <div className="bg-gray-200 md:bg-white flex flex-wrap items-center justify-between px-12 max-w-screen-lg mx-auto py-3 navbar-expand-md">
         <div className="w-full mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
             <Link

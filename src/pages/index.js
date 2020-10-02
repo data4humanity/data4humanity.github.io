@@ -124,21 +124,29 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="py-24 px-12 max-w-screen-lg mx-auto">
-        <div className="text-5xl font-bold pb-8">Projects in progress</div>
-        <div className="w-full flex">
+        <div className="text-5xl font-bold pb-8 text-center md:text-left">
+          Projects in progress
+        </div>
+        <div className="w-full flex flex-wrap">
           <div className="w-full md:w-1/3">
             <div>
-              <div className="font-bold text-2xl">Prison education</div>
+              <div className="font-bold text-2xl text-center md:text-left">
+                Prison education
+              </div>
             </div>
           </div>
           <div className="w-full md:w-1/3">
             <div>
-              <div className="font-bold text-2xl">Hunger and homelessness</div>
+              <div className="font-bold text-2xl text-center md:text-left">
+                Hunger and homelessness
+              </div>
             </div>
           </div>
           <div className="w-full md:w-1/3">
             <div>
-              <div className="font-bold text-2xl">Course recommendations</div>
+              <div className="font-bold text-2xl text-center md:text-left">
+                Recommending courses
+              </div>
             </div>
           </div>
         </div>
