@@ -33,16 +33,32 @@ const Header = ({ siteTitle, fixed }) => {
             }
           >
             <div className="flex flex-col md:flex-row list-none md:ml-auto text-lg">
-              <Link className="md:pl-8" to="/about">
+              <Link
+                className="md:pl-8 hover:text-primary transition duration-300 ease-out"
+                activeClassName="text-primary"
+                to="/about"
+              >
                 About
               </Link>
-              <Link className="md:pl-8" to="/projects">
+              <Link
+                className="md:pl-8 hover:text-primary transition duration-300 ease-out"
+                activeClassName="text-primary"
+                to="/projects"
+              >
                 Projects
               </Link>
-              <Link className="md:pl-8" to="/events">
+              <Link
+                className="md:pl-8 hover:text-primary transition duration-300 ease-out"
+                activeClassName="text-primary"
+                to="/events"
+              >
                 Events
               </Link>
-              <Link className="md:pl-8" to="/contact">
+              <Link
+                className="md:pl-8 hover:text-primary transition duration-300 ease-out"
+                activeClassName="text-primary"
+                to="/contact"
+              >
                 Contact
               </Link>
             </div>

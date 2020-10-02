@@ -35,41 +35,53 @@ const Footer = ({ siteTitle, fixed }) => {
             </div>
           </div>
           <div className="w-1/2 sm:w-1/3 lg:w-1/5">
-            <div className="font-semibold text-grey text-lg mb-1 mt-4">
+            <div className="font-semibold text-grey text-xl mb-1 mt-4">
               About
             </div>
             <div className="text-gray-600">
               <div>
-                <Link to="/about" className="text-grey hover:text-grey-dark">
+                <Link
+                  to="/about"
+                  className="text-grey hover:text-grey-dark hover:text-primary transition duration-300 ease-out"
+                >
                   About us
                 </Link>
               </div>
               <div>
-                <Link to="/projects" className="text-grey hover:text-grey-dark">
+                <Link
+                  to="/projects"
+                  className="text-grey hover:text-grey-dark hover:text-primary transition duration-300 ease-out"
+                >
                   Projects
                 </Link>
               </div>
               <div>
-                <Link to="/events" className="text-grey hover:text-grey-dark">
+                <Link
+                  to="/events"
+                  className="text-grey hover:text-grey-dark hover:text-primary transition duration-300 ease-out"
+                >
                   Events
                 </Link>
               </div>
             </div>
           </div>
           <div className="w-1/2 sm:w-1/3 lg:w-1/5">
-            <div className="font-semibold text-grey text-lg mb-1 mt-4">
+            <div className="font-semibold text-grey text-xl mb-1 mt-4">
               Work with us
             </div>
             <div className="text-gray-600">
               <div>
-                <Link to="/contact" className="text-grey hover:text-grey-dark">
+                <Link
+                  to="/contact"
+                  className="text-grey hover:text-grey-dark hover:text-primary transition duration-300 ease-out"
+                >
                   Contact us
                 </Link>
               </div>
             </div>
           </div>
           <div className="w-1/2 sm:w-1/3 lg:w-1/5">
-            <div className="font-semibold text-grey text-lg mb-1 mt-4">
+            <div className="font-semibold text-grey text-xl mb-1 mt-4">
               Contact
             </div>
             <div className="text-gray-600">
