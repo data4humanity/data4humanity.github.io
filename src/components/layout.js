@@ -13,7 +13,7 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, restrictWidth }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <div className={restrictWidth && "max-w-screen-lg mx-auto"}>
         <main>{children}</main>
       </div>
       <Footer siteTitle={data.site.siteMetadata.title} />

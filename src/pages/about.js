@@ -25,7 +25,7 @@ const board = [
 ]
 
 const About = () => (
-	<Layout>
+	<Layout restrictWidth={true}>
 		<SEO title="About" />
 		<div className="pt-16 pb-4 px-12 relative overflow-hidden">
 			<div className="text-5xl font-semibold bg-white max-w-full text-center md:text-left leading-tight">

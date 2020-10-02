@@ -26,7 +26,7 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout restrictWidth={true}>
       <SEO title="Home" />
       <div className="pt-32 pb-48 px-12 relative overflow-hidden">
         <div className="text-5xl font-semibold bg-white max-w-full text-center md:text-left leading-tight">

@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import UnderConstruction from "../images/under_construction.svg"
 
 const Events = () => (
-	<Layout>
+	<Layout restrictWidth={true}>
 		<SEO title="Events" />
 		<div className="pt-24 pb-24 px-12 relative overflow-hidden">
 			<img src={UnderConstruction} className="w-1/3 mx-auto" />
