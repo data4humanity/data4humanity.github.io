@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -10,13 +10,27 @@ import ExpertImage from "../images/expert.svg"
 import CollaborateImage from "../images/collaborate.svg"
 
 const IndexPage = () => {
-  let xBins = new Array(parseInt((window.innerWidth * 2) / 12)).fill(0)
+  let [windowWidth, setWindowWidth] = useState(0)
+  let [windowHeight, setWindowHeight] = useState(0)
+
+  let xBins = new Array(parseInt(windowWidth)).fill(0)
   let xPositions = new Array(2000)
   let yPositions = new Array(2000)
 
+  useEffect(() => {
+    console.log("hello!", windowWidth)
+    if (window.innerWidth !== windowWidth) {
+      setWindowWidth(window.innerWidth)
+    }
+
+    if (window.innerHeight !== windowHeight) {
+      setWindowHeight(window.innerHeight)
+    }
+  })
+
   for (var i = 0; i < 2000; i++) {
     let xBin = Math.round(
-      ((1 - Math.pow(Math.random(), 3)) * window.innerHeight * 2) / 12
+      ((1 - Math.pow(Math.random(), 3)) * windowHeight * 2) / 12
     )
 
     yPositions[i] = xBins[xBin]
